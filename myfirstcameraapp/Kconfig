@@ -1,0 +1,31 @@
+
+config MYCAMERAAPPS_MYFIRSTCAMERAAPP
+	tristate "My first camera app"
+	default y
+	---help---
+		Enable the myfirstcameraapp app
+
+if MYCAMERAAPPS_MYFIRSTCAMERAAPP
+
+config MYCAMERAAPPS_MYFIRSTCAMERAAPP_PROGNAME
+	string "Program name"
+	default "myfirstcameraapp"
+	---help---
+		This is the name of the program that will be use when the NSH ELF
+		program is installed.
+
+config MYCAMERAAPPS_MYFIRSTCAMERAAPP_PRIORITY
+	int "myfirstcameraapp task priority"
+	default 100
+
+config MYCAMERAAPPS_MYFIRSTCAMERAAPP_STACKSIZE
+	int "myfirstcameraapp stack size"
+	default 2048
+
+config MYCAMERAAPPS_MYFIRSTCAMERAAPP_OUTPUT_LCD
+	bool "Output to LCD"
+	default n
+	---help---
+		This enables to output the captured RGB565 image to LCD.
+
+endif

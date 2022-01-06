@@ -1,0 +1,4 @@
+
+ifneq ($(CONFIG_MYCAMERAAPPS_MYFIRSTCAMERAAPP),)
+CONFIGURED_APPS += myfirstcameraapp
+endif
